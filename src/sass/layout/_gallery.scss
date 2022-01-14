@@ -1,21 +1,10 @@
-.gallery {
-  background-image: url('../images/gallery/tel-gallery.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('../images/gallery/tel-gallery-2x.jpg');
+.gallery__container {
+  margin: 0 auto;
+  max-width: 320px;
+  @media screen and(min-width:$tablet) {
+    max-width: 768px;
   }
-  @media screen and (min-width: $tablet) {
-    background-image: url('../images/gallery/table-gallery.jpg');
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('../images/gallery/table-gallery-2x.jpg');
-    }
-  }
-  @media screen and (min-width: $desktop) {
-    background-image: url('../images/gallery/gallery.jpg');
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('../images/gallery/gallery-2x.jpg');
-    }
+  @media screen and(min-width:$desktop) {
+    max-width: 1280px;
   }
 }
