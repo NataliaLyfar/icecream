@@ -33,15 +33,17 @@
   }
 }
 
+.about-description {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .about-description__text {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
 
   color: $primary-text-color;
-
-  // padding-left: 50px;
-  // padding-right: 50px;
 
   margin-bottom: 36px;
 
