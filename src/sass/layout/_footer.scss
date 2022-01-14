@@ -21,7 +21,6 @@
 }
 .footer .title {
     max-width: 200px;
-    margin-bottom: 43px;
 }
 }
 
@@ -77,64 +76,54 @@
     @include transition (background-color);
     background-color: $primary-brand-color;
 }
-
+.title-wrapper, .contacts-wrapper {
+    @media screen and (max-width:767px){
+    padding-bottom: 43px;
+    }
+}
 .contact-tel {
 font-weight: 700;
 line-height: 1.86;
 text-align: right;
-
-		&__link {
-            font-weight: 500;
-            text-decoration: none;
-            color: $primary-brand-color;
-		}
-
-    @media screen and (max-width:767px){
-        font-size: 12px;
-        margin-bottom: 43px;
-    }
-
-    @media screen and (min-width:$tablet){
-        font-size: 14px;
-    }
-
-    @media screen and (min-width:$desktop){
-        font-size: 16px;
-    }
+font-size: 12px;
+@media screen and (min-width:$tablet){
+    font-size: 14px;
+}
+@media screen and (min-width:$desktop){
+    font-size: 16px;
+}
+	&__link {
+    font-weight: 500;
+    color: $primary-brand-color;
+	}
 }
 
 .copyright {
 padding-top: 22px;
 padding-bottom: 25px;
 border-top: solid 1px #e1e1e1;
-
 @media screen and (min-width:$tablet){
 padding-top: 29px;
 padding-bottom: 18px;
 }
-
 @media screen and (min-width:$desktop){
     padding-top: 9px;
     padding-bottom: 10px;
 }
-
-        &__text-wrapper{
+	&__text {
     max-width: 149px;
     text-align: center;
     margin: 0 auto;
-        }
-
-		&__text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.52;
     color: $secondary-text-color;
-		}
+    @media screen and (min-width:$tablet){
+     line-height: 1.86;   
+     max-width: 100%;
+    }
+	}
 }
 
-@media screen and (min-width:$tablet){
-    .copyright__text-wrapper{
-        max-width: 100%;
-    }
-}
+
 
