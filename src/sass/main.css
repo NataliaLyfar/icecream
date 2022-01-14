@@ -203,7 +203,7 @@ img {
   display: block;
   height: 50px;
   width: 50px;
-  background-image: url("../src/images/advantages/icon1.png");
+  background-image: url("./src/images/advantages/icon1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -211,7 +211,7 @@ img {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .advantages-list__item--first::before {
-    background-image: url("../src/images/advantages/icon1@2x.png");
+    background-image: url("./src/images/advantages/icon1@2x.png");
   }
 }
 
@@ -220,7 +220,7 @@ img {
   display: block;
   height: 50px;
   width: 50px;
-  background-image: url("../src/images/advantages/icon2.png");
+  background-image: url("./src/images/advantages/icon2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -228,7 +228,7 @@ img {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .advantages-list__item--second::before {
-    background-image: url("../src/images/advantages/icon2@2x.png");
+    background-image: url("./src/images/advantages/icon2@2x.png");
   }
 }
 
@@ -237,7 +237,7 @@ img {
   display: block;
   height: 50px;
   width: 50px;
-  background-image: url("../src/images/advantages/icon3.png");
+  background-image: url("./src/images/advantages/icon3.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -245,7 +245,7 @@ img {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .advantages-list__item--third::before {
-    background-image: url("../src/images/advantages/icon3@2x.png");
+    background-image: url("./src/images/advantages/icon3@2x.png");
   }
 }
 
