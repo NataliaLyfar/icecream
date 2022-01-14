@@ -1,0 +1,62 @@
+.hero {
+  position: relative;
+  padding-top: 193px;
+  padding-bottom: 160px;
+  background-color: $secondary-brand-color;
+  background-image: url(/images/hero/mobile/hero-ellipse-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: right bottom 72px;
+  @media screen and (min-width: $desktop) {
+    & .hero__container {
+      padding-right: 97px;
+    }
+  }
+}
+
+.hero-title-block__list {
+	display: flex;
+	flex-direction: row;
+}
+
+.hero-title-block__item:not(last.child) {
+	
+}
+
+.title-block__wrapper {
+  z-index: 1;
+  position: relative;
+  width: 218px;
+}
+
+.hero-outlets-numbers__wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero-jug-block__wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero-jug-block__image {
+  width: 124px;
+}
+
+.hero-icecream__image {
+  width: 171px;
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+}
+
+.hero-girl__wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero-girl__image {
+  width: 168px;
+}
