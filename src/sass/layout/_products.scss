@@ -58,6 +58,7 @@
     margin-left: auto;
     border-radius: 24px;
     background-color: $secondary-brand-color;
+    text-align: center;
 
     @media screen and (min-width: $tablet) {
       width: 220px;
@@ -98,5 +99,74 @@
     //   width: 330px;
     //   height: 525px;
     // }
+  }
+
+  &__item-title {
+    font-family: $secondary-font;
+    @include font(400, 20px, 1.15, 0.04em);
+    color: $primary-color;
+
+    @media screen and (min-width: $desktop) {
+      @include font(400, 30px, 1.13, 0.04em);
+    }
+  }
+
+  &__item:first-child::before,
+  &__item:nth-child(2)::before,
+  &__item:last-child::before {
+    content: '';
+    display: block;
+    width: 249px;
+    height: 252px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -180px auto 22px;
+  }
+
+  &__item:first-child::before {
+    background-image: url('../images/products/ice_cream-mob-1x.png');
+  }
+
+  &__item:nth-child(2)::before {
+    background-image: url('../images/products/ice_coffee-mob-1x.png');
+  }
+
+  &__item:last-child::before {
+    background-image: url('../images/products/milkshakes-mob-1x.png');
+  }
+
+  &__item-title::after {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 6px;
+    margin: 30px auto;
+    background-image: url('../images/products/dots-1x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/products/dots-2x.png');
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin: 32px auto;
+    }
+  }
+
+  &__item-text {
+    @include font(700, 14px, 1.52, 0.04em);
+    color: $primary-color;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+      @include font(700, 14px, 1.76, 0.04em);
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(700, 16px, 1.76, 0.04em);
+      margin-bottom: 62px;
+    }
   }
 }
