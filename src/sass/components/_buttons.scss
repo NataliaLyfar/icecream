@@ -1,3 +1,5 @@
+// ---------------------- CONTACTS BUTTONS -------------------  //
+
 .contacts-locations-button {
   @extend %button--pink;
   @extend %flex-center-style;
@@ -43,4 +45,59 @@
 
 .button__icon--pink {
   stroke: $primary-brand-color;
+}
+
+// ---------------------- FRANCHISE-MODAL BUTTONS -------------------  //
+
+.franchise-close-button {
+  @extend %flex-center-style;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    .franchise-form__icon-close {
+      transform: scale(1.25);
+      fill: $primary-brand-color;
+    }
+  }
+}
+
+.franchise-form__icon-close {
+  transform: scale(1);
+  transition: fill $transition-duration $transition-timing-function,
+    transform $transition-duration $transition-timing-function;
+  fill: $secondary-text-color;
+}
+
+.franchise-form-button {
+  @extend %button--pink;
+
+  @media screen and (max-width: 767px) {
+    width: 140px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 174px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 180px;
+  }
+
+  &:hover,
+  &:focus {
+    .franchise-form-button__text {
+      transform: scale(1.25);
+    }
+  }
+}
+
+.franchise-form-button__text {
+  display: inline-block;
+  transform: scale(1);
+  transition: transform $transition-duration $transition-timing-function;
 }
