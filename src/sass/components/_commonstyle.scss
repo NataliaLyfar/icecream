@@ -24,6 +24,17 @@ p {
   padding: 0;
 }
 
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+button {
+	padding: 0;
+	border: none;
+	cursor: pointer;
+}
+
 img {
   display: block;
   max-width: 100%;

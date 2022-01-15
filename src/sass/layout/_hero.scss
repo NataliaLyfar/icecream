@@ -1,19 +1,20 @@
 .hero {
+  background-color: $secondary-brand-color;
+}
+
+.hero__container {
   position: relative;
   padding-top: 193px;
   padding-bottom: 160px;
-  background-color: $secondary-brand-color;
-  background-image: url(/images/hero/mobile/hero-ellipse-mobile@1x.png);
-  background-repeat: no-repeat;
-  background-position: right bottom 72px;
+
   @media screen and (min-width: $tablet) {
     padding-top: 100px;
     padding-bottom: 173px;
   }
   @media screen and (min-width: $desktop) {
-    & .hero__container {
-      padding-right: 97px;
-    }
+    padding-top: 171px;
+    padding-bottom: 292px;
+    padding-right: 97px;
   }
 }
 
@@ -23,37 +24,80 @@
   align-items: center;
 }
 
-.title-block__wrapper {
+.title__wrapper {
   z-index: 1;
   position: relative;
   width: 218px;
   @media screen and (min-width: $tablet) {
     width: 208px;
   }
+  @media screen and (min-width: $desktop) {
+    width: 359px;
+  }
 }
 
-.hero-title-block__list {
+.title__list {
   display: flex;
   flex-direction: row;
   margin-top: 19px;
+  @media screen and (min-width: $desktop) {
+    margin-top: 25px;
+  }
 }
 
-.hero-title-block__item:not(last.child) {
+.title__link {
+  display: block;
+  font-family: $primary-font;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  padding: 9px 14px;
+  border-radius: 20px;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.29;
+    padding: 15px 23px;
+  }
+}
+
+.title__link--brand-color {
+  color: $primary-color;
+  background-color: $primary-brand-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.title__link--primary-color {
+  color: $primary-brand-color;
+  background-color: $primary-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-shadow-color;
+  }
+}
+
+.title__item:not(last.child) {
   margin-right: 8px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 15px;
+  }
 }
 
-.hero-outlets-numbers__wrapper {
+.outlets__wrapper {
+  z-index: 1;
   @media screen and (max-width: 767px) {
     display: none;
   }
 }
 
-.hero-outlets-numbers__item:not(last.child) {
-	margin-bottom: 13px;
+.outlets__item:not(last.child) {
+  margin-bottom: 13px;
 }
 
-.hero-outlets-numbers__title {
-	text-align: end;
+.outlets__number {
+  text-align: end;
   font-family: $secondary-font;
   font-weight: normal;
   font-size: 28px;
@@ -61,19 +105,27 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $primary-brand-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.15;
+  }
 }
 
-.hero-outlets-numbers__text {
-	text-align: end;
+.outlets__text {
+  text-align: end;
   font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 8px;
   line-height: 1.25;
   color: $primary-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.28;
+  }
 }
 
-.hero-jug-block__wrapper {
+.jug__wrapper {
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -82,23 +134,68 @@
   align-items: flex-end;
   bottom: 28px;
   left: 34px;
+  @media screen and (min-width: $desktop) {
+    bottom: 45px;
+    left: 77px;
+  }
 }
 
-.hero-jug-block__image {
+.jug__image {
   width: 124px;
+  @media screen and (min-width: $desktop) {
+    width: 188px;
+  }
 }
 
-.hero-jug-block__article {
+.jug__article {
   width: 114px;
+  @media screen and (min-width: $desktop) {
+    width: 200px;
+	 margin-left: 30px;
+  }
 }
 
-.hero-jug-block__text {
+.jug__text {
   font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 8px;
   line-height: 1.25;
   color: $primary-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+	 line-height: 1.28;
+  }
+}
+
+.jug__button {
+	width: 18px;
+	height: 18px;
+	margin-top: 7px;
+	border-radius: 50%;
+	
+	@media screen and (min-width: $desktop) {
+   width: 26px;
+	height: 26px;
+	margin-top: 20px;
+  }
+}
+
+.hero-ellipse__image {
+  position: absolute;
+  width: 284px;
+  right: 0;
+  bottom: 75px;
+  @media screen and (min-width: $tablet) {
+    width: 324px;
+    right: 137px;
+    bottom: 46px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 538px;
+    right: 267px;
+    bottom: 75px;
+  }
 }
 
 .hero-icecream__image {
@@ -107,8 +204,12 @@
   bottom: 0;
   right: 32px;
   @media screen and (min-width: $tablet) {
-    width: 171px;
+    width: 143px;
     right: 247px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 236px;
+    right: 450px;
   }
 }
 
@@ -123,4 +224,8 @@
   width: 168px;
   bottom: 0;
   right: 34px;
+  @media screen and (min-width: $desktop) {
+    width: 293px;
+    right: 109px;
+  }
 }
