@@ -1,0 +1,279 @@
+.main-wrapper {
+  min-width: 100%;
+}
+
+.scrolltop {
+  @include transition (background-color);
+  @extend %flex-center-style;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  z-index: 99;
+  background-color: $primary-brand-color;
+  @media screen and (min-width: 768px) {
+     width: 40px;
+     height: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+     bottom: 20px;
+     right: 20px;
+     width: 50px;
+     height: 50px;
+  }
+  &:hover,
+  &:focus {
+     background-color: $secondary-brand-color;
+  }
+}
+
+.showBtn {
+  opacity: 1;
+}
+
+.scroll-top__btn {
+  border: solid $primary-color;
+  border-width: 0 2px 2px 0;
+
+  display: inline-block;
+  padding: 3px;
+
+  &--up {
+     transform: rotate(-135deg);
+  }
+}
+
+.hero {
+  background-color: $secondary-brand-color;
+}
+
+.hero__container {
+  position: relative;
+  padding-top: 193px;
+  padding-bottom: 160px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 100px;
+    padding-bottom: 173px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 171px;
+    padding-bottom: 292px;
+    padding-right: 97px;
+  }
+}
+
+.hero__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title__wrapper {
+  z-index: 1;
+  position: relative;
+  width: 218px;
+  @media screen and (min-width: $tablet) {
+    width: 208px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 359px;
+  }
+}
+
+.title__list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 19px;
+  @media screen and (min-width: $desktop) {
+    margin-top: 25px;
+  }
+}
+
+.title__link {
+  display: block;
+  font-family: $primary-font;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  padding: 9px 14px;
+  border-radius: 20px;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.29;
+    padding: 15px 23px;
+  }
+}
+
+.title__link--brand-color {
+  color: $primary-color;
+  background-color: $primary-brand-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.title__link--primary-color {
+  color: $primary-brand-color;
+  background-color: $primary-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-shadow-color;
+  }
+}
+
+.title__item:not(last.child) {
+  margin-right: 8px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 15px;
+  }
+}
+
+.outlets__wrapper {
+  z-index: 1;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.outlets__item:not(last.child) {
+  margin-bottom: 13px;
+}
+
+.outlets__number {
+  text-align: end;
+  font-family: $secondary-font;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-brand-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+}
+
+.outlets__text {
+  text-align: end;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $primary-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.jug__wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  bottom: 28px;
+  left: 34px;
+  @media screen and (min-width: $desktop) {
+    bottom: 45px;
+    left: 77px;
+  }
+}
+
+.jug__image {
+  width: 124px;
+  @media screen and (min-width: $desktop) {
+    width: 188px;
+  }
+}
+
+.jug__article {
+  width: 114px;
+  @media screen and (min-width: $desktop) {
+    width: 200px;
+	 margin-left: 30px;
+  }
+}
+
+.jug__text {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $primary-color;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+	 line-height: 1.28;
+  }
+}
+
+.jug__button {
+	width: 18px;
+	height: 18px;
+	margin-top: 7px;
+	border-radius: 50%;
+	
+	@media screen and (min-width: $desktop) {
+   width: 26px;
+	height: 26px;
+	margin-top: 20px;
+  }
+}
+
+.hero-ellipse__image {
+  position: absolute;
+  width: 284px;
+  right: 0;
+  bottom: 75px;
+  @media screen and (min-width: $tablet) {
+    width: 324px;
+    right: 137px;
+    bottom: 46px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 538px;
+    right: 267px;
+    bottom: 75px;
+  }
+}
+
+.hero-icecream__image {
+  width: 171px;
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+  @media screen and (min-width: $tablet) {
+    width: 143px;
+    right: 247px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 236px;
+    right: 450px;
+  }
+}
+
+.hero-girl__wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero-girl__image {
+  position: absolute;
+  width: 168px;
+  bottom: 0;
+  right: 34px;
+  @media screen and (min-width: $desktop) {
+    width: 293px;
+    right: 109px;
+  }
+}

@@ -11,12 +11,12 @@ $secondary-font: 'Titan One', cursive;
 $primary-color: #ffffff;
 $secondary-color: #fff5f6;
 
-$primary-brand-color: #d41443;
-$primary-brand-shade-color: #D41342;
+$primary-brand-color: #d21443;
+$primary-brand-shade-color: #d41342;
 $secondary-brand-color: #ffb8ca;
 $tertiary-brand-color: #ffa5ba;
-$second-card-color: #F0D1A5;
-$third-card-color: #C2E297;
+$second-card-color: #f0d1a5;
+$third-card-color: #c2e297;
 
 $primary-text-color: #000000;
 $secondary-text-color: #907e82;
@@ -24,9 +24,8 @@ $secondary-text-color: #907e82;
 $accent-color: #c7133e;
 $accent-shadow-color: #ecebeb;
 
+$border-color: #e1e1e1;
 
-  // Animation 
-  $transition-duration: 250ms;
-  $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-   
+// Animation
+$transition-duration: 250ms;
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
