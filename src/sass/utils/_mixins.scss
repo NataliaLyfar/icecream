@@ -1,9 +1,16 @@
-@mixin transition ($property) {
-   transition: $property $transition-duration $transition-timing-function; 
+@mixin transition($property) {
+  transition: $property $transition-duration $transition-timing-function;
 }
 
-@mixin animation ($declaration, $duration, $delay) {
-animation: $declaration; 
-animation-duration: $duration;
-animation-delay: $delay;
+@mixin animation($declaration, $duration, $delay) {
+  animation: $declaration;
+  animation-duration: $duration;
+  animation-delay: $delay;
+}
+
+@mixin font($fz, $lh, $ls, $fw) {
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: $fw;
 }
