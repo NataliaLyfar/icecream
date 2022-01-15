@@ -53,6 +53,7 @@
   background-color: #ecebeb;
 }
 
+
 body {
   color: #000000;
   background-color: #ffffff;
@@ -517,6 +518,28 @@ img {
   }
 }
 
+.reviews {
+  font-family: DM Sans;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 255%;
+  text-align: center;
+  color: #000000;
+}
+
+.reviews__title {
+  visibility: hidden;
+}
+
+.reviews__image {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 480px) {
+  .reviews__text {
+    max-width: 157px;
 @media screen and (max-width: 767px) {
   .contacts {
     padding-bottom: 113px;
