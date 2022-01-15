@@ -39,6 +39,15 @@
   margin-right: 13px;
 }
 
+.modal-button__text {
+  @media screen and (max-width: 767px) {
+    margin-right: 16px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-right: 12px;
+  }
+}
+
 .button__icon--white {
   stroke: $primary-color;
 }
@@ -47,6 +56,34 @@
   stroke: $primary-brand-color;
 }
 
+origin/feature/header2
+.header-button {
+  @extend %button--white;
+  @extend %flex-center-style;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 160px;
+  }
+}
+
+.modal-button {
+  @extend %button--white;
+  @extend %flex-center-style;
+
+  @media screen and (max-width: 767px) {
+    width: 209px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 186px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+=======
 // ---------------------- FRANCHISE-MODAL BUTTONS -------------------  //
 
 .franchise-close-button {
@@ -101,3 +138,4 @@
   transform: scale(1);
   transition: transform $transition-duration $transition-timing-function;
 }
+
