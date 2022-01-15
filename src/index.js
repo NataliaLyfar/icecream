@@ -6,3 +6,4 @@ import './js/modal-about';
 import './js/slick';
 import './js/map-modal';
 import './js/franchize-modal';
+import './js/scroll-top';
