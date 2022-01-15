@@ -3,7 +3,7 @@
 }
 
 .scrolltop {
-  @include transition (background-color);
+  @include transition(background-color);
   @extend %flex-center-style;
   position: fixed;
   bottom: 10px;
@@ -15,18 +15,18 @@
   z-index: 99;
   background-color: $primary-brand-color;
   @media screen and (min-width: 768px) {
-     width: 40px;
-     height: 40px;
+    width: 40px;
+    height: 40px;
   }
   @media screen and (min-width: 1280px) {
-     bottom: 20px;
-     right: 20px;
-     width: 50px;
-     height: 50px;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
   }
   &:hover,
   &:focus {
-     background-color: $secondary-brand-color;
+    background-color: $secondary-brand-color;
   }
 }
 
@@ -42,11 +42,12 @@
   padding: 3px;
 
   &--up {
-     transform: rotate(-135deg);
+    transform: rotate(-135deg);
   }
 }
 
 .hero {
+	overflow: hidden;
   background-color: $secondary-brand-color;
 }
 
@@ -140,8 +141,34 @@
   }
 }
 
+.outlets__item {
+  position: relative;
+}
+
 .outlets__item:not(last.child) {
   margin-bottom: 13px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 35px;
+  }
+}
+
+.outlets__item::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: $primary-color;
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  border-radius: 50%;
+  z-index: -1;
+
+  @media screen and (min-width: $desktop) {
+    width: 30px;
+    height: 30px;
+    right: -16px;
+    top: -8px;
+  }
 }
 
 .outlets__number {
@@ -199,7 +226,7 @@
   width: 114px;
   @media screen and (min-width: $desktop) {
     width: 200px;
-	 margin-left: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -212,27 +239,35 @@
   color: $primary-color;
   @media screen and (min-width: $desktop) {
     font-size: 14px;
-	 line-height: 1.28;
+    line-height: 1.28;
   }
 }
 
 .jug__button {
-	width: 18px;
-	height: 18px;
-	margin-top: 7px;
-	border-radius: 50%;
-	
-	@media screen and (min-width: $desktop) {
-   width: 26px;
-	height: 26px;
-	margin-top: 20px;
+  width: 18px;
+  height: 18px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background-image: url(../images/hero/tablet/arrow-right-tablet@1x.png);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/hero/tablet/arrow-right-tablet@2x.png);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 26px;
+    height: 26px;
+    margin-top: 20px;
+    background-image: url(../images/hero/desktop/arrow-right-desktop@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero/desktop/arrow-right-desktop@2x.png);
+    }
   }
 }
 
 .hero-ellipse__image {
   position: absolute;
-  width: 284px;
-  right: 0;
+  width: 346px;
+  right: -36px;
   bottom: 75px;
   @media screen and (min-width: $tablet) {
     width: 324px;
