@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.title-block__wrapper {
+.title__wrapper {
   z-index: 1;
   position: relative;
   width: 218px;
@@ -32,28 +32,54 @@
   }
 }
 
-.hero-title-block__list {
+.title__list {
   display: flex;
   flex-direction: row;
   margin-top: 19px;
 }
 
-.hero-title-block__item:not(last.child) {
+.title__link {
+  display: block;
+  font-family: $primary-font;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  padding: 9px 14px;
+  border-radius: 20px;
+}
+
+.title__link--brand-color {
+	color: $primary-color;
+	background-color: $primary-brand-color;
+	&:hover, &:focus {
+		background-color: $accent-color;
+	}
+}
+
+.title__link--primary-color {
+	color: $primary-brand-color;
+	background-color: $primary-color;
+	&:hover, &:focus {
+		background-color: $accent-shadow-color;
+	}
+}
+
+.title__item:not(last.child) {
   margin-right: 8px;
 }
 
-.hero-outlets-numbers__wrapper {
+.outlets__wrapper {
   @media screen and (max-width: 767px) {
     display: none;
   }
 }
 
-.hero-outlets-numbers__item:not(last.child) {
-	margin-bottom: 13px;
+.outlets__item:not(last.child) {
+  margin-bottom: 13px;
 }
 
-.hero-outlets-numbers__title {
-	text-align: end;
+.outlets__number {
+  text-align: end;
   font-family: $secondary-font;
   font-weight: normal;
   font-size: 28px;
@@ -63,8 +89,8 @@
   color: $primary-brand-color;
 }
 
-.hero-outlets-numbers__text {
-	text-align: end;
+.outlets__text {
+  text-align: end;
   font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
@@ -73,7 +99,7 @@
   color: $primary-color;
 }
 
-.hero-jug-block__wrapper {
+.jug__wrapper {
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -84,15 +110,15 @@
   left: 34px;
 }
 
-.hero-jug-block__image {
+.jug__image {
   width: 124px;
 }
 
-.hero-jug-block__article {
+.jug__article {
   width: 114px;
 }
 
-.hero-jug-block__text {
+.jug__text {
   font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
@@ -107,8 +133,12 @@
   bottom: 0;
   right: 32px;
   @media screen and (min-width: $tablet) {
-    width: 171px;
+    width: 143px;
     right: 247px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 236px;
+    right: 450px;
   }
 }
 
