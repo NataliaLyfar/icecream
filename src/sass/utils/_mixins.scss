@@ -14,3 +14,12 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
+
+@mixin slider-img($url, $slick-active: true) {
+  @if $slick-active {
+    opacity: 0.75;
+    background-image: url($url);
+  } @else {
+    background-image: url('../images/customer-reviews/ellipse.svg');
+  }
+}

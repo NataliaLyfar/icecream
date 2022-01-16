@@ -1,8 +1,7 @@
 .reviews-wraper {
-  @media screen and (max-width: 767px) {
-    padding-top: 80px;
-    padding-bottom: 86px;
-  }
+  padding-top: 80px;
+  padding-bottom: 86px;
+
   @media screen and (min-width: $tablet) {
     padding-top: 121px;
     padding-bottom: 119px;
@@ -24,64 +23,61 @@
     flex-direction: column;
     align-items: center;
   }
-  &__image {
-    align-items: center;
-  }
 
   &__text-wraper {
-    position: relative;
-
+    margin-top: 29px;
+    margin-bottom: 30px;
+    padding: 43px 66px 26px 57px;
     background-color: $shadow-background-color;
-    @media screen and (max-width: 767px) {
-      margin-top: 29px;
-      margin-bottom: 56px;
-      padding: 43px 66px 26px 57px;
-    }
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
-      margin-top: 69px;
-      margin-bottom: 76px;
+
+    @media screen and (min-width: $tablet) and (max-width: 1279px) {
+      margin-top: 22px;
+      margin-bottom: 21px;
       padding: 47px 80px 34px 80px;
-      // background-color: opacity(0.4);
+      background-color: rgba($shadow-background-color, 0.4);
     }
+
     @media screen and (min-width: $desktop) {
-      margin-top: 62px;
-      margin-bottom: 73px;
+      margin-top: 15px;
+      margin-bottom: 15px;
       padding: 32px 54px 32px 50px;
     }
+  }
 
-    &:before {
-      content: '';
-      background-repeat: no-repeat;
-      width: 54px;
-      height: 40px;
+  &__gradient {
+    width: 180px;
 
-      background-image: url(../images/customer-reviews/“-1x.webp);
-      position: absolute;
-      top: 28px;
-      left: 61px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      $shadow-background-color,
+      $shadow-background-color 29px,
+      $border-color 29px,
+      $border-color 30px
+    );
 
-      @media screen and (min-width: $tablet) {
-        top: 30px;
-        left: 40px;
-      }
-      @media screen and (min-width: $desktop) {
-        top: 32px;
-        left: 50px;
-      }
+    @media screen and (min-width: $tablet) {
+      width: 544px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 822px;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        $shadow-background-color,
+        $shadow-background-color 28px,
+        $border-color 28px,
+        $border-color 29px
+      );
     }
   }
 
   &__text {
+    position: relative;
     text-align: center;
-    color: $primary-text-color;
+    z-index: 1;
     max-width: 157px;
-    @include font(500, 12px, 255%, normal);
-    // display: inline;
 
-    background-repeat: no-repeat;
-    background-position: center top 15px;
-    background-size: 100% 1px;
-    background-image: linear-gradient($border-color, $border-color);
+    @include font(500, 12px, 255%, normal);
+    color: $primary-text-color;
 
     @media screen and (min-width: $tablet) {
       max-width: 460px;
@@ -91,19 +87,68 @@
       max-width: 750px;
       @include font(500, 16px, 186%, 0.04em);
     }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -15px;
+      left: 3px;
+      z-index: -1;
+      width: 54px;
+      height: 40px;
+
+      background-repeat: no-repeat;
+
+      background-image: url(../images/customer-reviews/“-1x.webp);
+
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/customer-reviews/“-2x.webp);
+      }
+
+      @media screen and (min-width: $tablet) {
+        left: -40px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        left: -37px;
+      }
+    }
   }
 
   &__author {
-    font-weight: 500;
-    line-height: 186%;
-    @media screen and (max-width: 767px) {
-      font-size: 14px;
-    }
+    @include font(500, 14px, 186%, normal);
+
     @media screen and (min-width: $tablet) {
       font-size: 16px;
     }
+
     @media screen and (min-width: $desktop) {
       font-size: 20px;
     }
+
+    &::before {
+      content: '';
+      display: block;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 4px;
+      margin-bottom: 18px;
+      margin-left: auto;
+      margin-right: auto;
+
+      background-image: url('../images/customer-reviews/three-point-1x.svg');
+      @media screen and (min-width: $tablet) {
+        margin-bottom: 14px;
+      }
+    }
   }
+}
+
+.slick-dots li.slick-active {
+  background-repeat: no-repeat;
+  background-image: url('../images/customer-reviews/home.svg');
 }
