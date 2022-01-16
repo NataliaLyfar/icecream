@@ -81,6 +81,18 @@
   }
 }
 
+.order-button {
+  @extend %button--pink;
+  @extend %flex-center-style;
+  margin: 60px auto 19px;
+  @media screen and (max-width: 767px) {
+    width: 209px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 186px;
+  }
+}
+
 .modal-button__text {
   @media screen and (max-width: 767px) {
     margin-right: 16px;
