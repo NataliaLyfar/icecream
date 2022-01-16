@@ -66,10 +66,12 @@
     min-width: 280px;
   }
 
+  &:hover,
   &:focus {
     border-color: $primary-brand-color;
   }
 
+  &:hover + .franchise-form__label,
   &:focus + .franchise-form__label {
     top: 0;
     color: $primary-brand-color;

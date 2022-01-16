@@ -1,4 +1,4 @@
-// ---------------------- CONTACTS BUTTONS -------------------  //
+// ----------------------------- CONTACTS BUTTONS --------------------------  //
 
 .contacts-locations-button {
   @extend %button--pink;
@@ -46,6 +46,7 @@
 .button__icon--pink {
   stroke: $primary-brand-color;
 }
+
 
 // ---------------------- Header BUTTONS -------------------  //
 
@@ -97,10 +98,11 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  padding: 2px;
   border: none;
   border-radius: 50%;
-  padding: 2px;
   background-color: transparent;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -143,4 +145,36 @@
   display: inline-block;
   transform: scale(1);
   transition: transform $transition-duration $transition-timing-function;
+}
+
+// ----------------------------------- MAP-MODAL BUTTONS -----------------------------  //
+
+.map-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  @extend %flex-center-style;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: $primary-color;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+
+    .map-form__icon-close {
+      fill: $primary-brand-color;
+    }
+  }
+}
+
+.map-form__icon-close {
+  fill: $secondary-text-color;
+  transition: fill $transition-duration $transition-timing-function,
+    transform $transition-duration $transition-timing-function;
 }

@@ -16,6 +16,7 @@
   color: $primary-color;
   background-color: $accent-color;
 
+  cursor: pointer;
   transition: box-shadow $transition-duration $transition-timing-function;
 
   &:hover,
@@ -36,6 +37,7 @@
   background-color: $primary-color;
   color: $accent-color;
 
+  cursor: pointer;
   transition: box-shadow $transition-duration $transition-timing-function,
     background-color $transition-duration $transition-timing-function;
 
