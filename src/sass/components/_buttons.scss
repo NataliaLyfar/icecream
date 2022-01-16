@@ -47,7 +47,51 @@
   stroke: $primary-brand-color;
 }
 
-// --------------------------------- FRANCHISE-MODAL BUTTONS ------------------------  //
+
+// ---------------------- Header BUTTONS -------------------  //
+
+.header-button {
+  @extend %button--white;
+  @extend %flex-center-style;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 160px;
+  }
+}
+
+.modal-button {
+  @extend %button--white;
+  @extend %flex-center-style;
+  margin-top: 60px;
+  margin-bottom: 19px;
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 209px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 186px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+    margin: 0;
+  }
+}
+
+.modal-button__text {
+  @media screen and (max-width: 767px) {
+    margin-right: 16px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-right: 12px;
+  }
+}
+
+// ---------------------- FRANCHISE-MODAL BUTTONS -------------------  //
 
 .franchise-close-button {
   @extend %flex-center-style;
