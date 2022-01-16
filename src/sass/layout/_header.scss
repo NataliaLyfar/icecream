@@ -1,4 +1,3 @@
-
 .header {
   position: absolute;
   z-index: 20;
@@ -18,20 +17,6 @@
   }
 }
 
-.logo {
-  @media screen and (max-width: 767px) {
-    margin-right: 64px;
-  }
-
-  @media screen and (min-width: $tablet) and (max-width: 1279px) {
-    margin-right: 291px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    margin-right: 110px;
-  }
-}
-
 .menu-button {
   width: 20px;
   height: 14px;
@@ -47,29 +32,42 @@
 .nav-list {
   @media screen and (min-width: $desktop) {
     display: flex;
-    margin-right: 110px;
   }
 }
 
-.nav-list__item { 
+.nav-list__item {
   @media screen and (min-width: $desktop) {
     &:not(:first-child) {
       margin-left: 35px;
     }
   }
+  @media screen and (max-width: 1279px) {
+    padding: 13px 0;
+    display: block;
+    border-bottom: 1px solid $menu-border-color;
+    &:first-child {
+      border-top: 1px solid $menu-border-color;
+    }
+  }
 }
 
 .nav-list__link {
-  padding: 25px 0;
+  padding: 13px 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
   color: $primary-color;
   @media screen and (min-width: $desktop) {
-  font-size: 16px;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 1279px) {
+    margin-left: 21px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-left: 24px;
   }
   &:hover,
-   &:focus {
-      color: $primary-brand-color;
-   }
+  &:focus {
+    color: $primary-brand-color;
+  }
 }

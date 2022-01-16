@@ -1,12 +1,16 @@
 .mobile-menu {
   position: fixed;
-  top: 60px;
-  left: 0;
+  top: 0px;
+  right: 0;
   @media screen and (max-width: 767px) {
-    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary-brand-shadow-color;
   }
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     padding: 34px;
+    height: 100vh;
+    background-color: $primary-brand-shadow-color;
   }
   @media screen and (min-width: $desktop) {
     position: static;
@@ -15,6 +19,7 @@
 
 .cross-button {
   position: absolute;
+  display: block;
   @media screen and (max-width: 767px) {
     top: 23px;
     right: 28px;

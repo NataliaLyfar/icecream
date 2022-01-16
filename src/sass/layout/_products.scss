@@ -185,6 +185,8 @@
   }
 
   &__item-wrap {
+    position: relative;
+    overflow: hidden;
     width: 280px;
     height: 485px;
     padding: 161px 40px 41px;
@@ -243,6 +245,53 @@
     @media screen and (min-width: $desktop) {
       @include font(700, 16px, 1.76, 0.04em);
       margin-bottom: 62px;
+    }
+  }
+
+  &__item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 77%;
+    transform: translateY(130%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 24px;
+    padding: 60px 40px;
+  }
+
+  &__item:first-child &__item-overlay {
+    background-color: rgba($secondary-brand-color, 0.9);
+  }
+  &__item:nth-child(2) &__item-overlay {
+    background-color: rgba($second-card-color, 0.9);
+  }
+  &__item:last-child &__item-overlay {
+    background-color: rgba($third-card-color, 0.9);
+  }
+
+  &__button:hover + &__item-overlay {
+    transform: translateY(0);
+  }
+
+  &__item-details {
+    @include font(400, 14px, 1.15, 0.04em);
+    color: $primary-color;
+
+    @media screen and (min-width: $desktop) {
+      @include font(400, 16px, 1.5, 0.04em);
+    }
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url('../images/products/arrow-right-1x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/products/arrow-right-2x.png');
     }
   }
 }
