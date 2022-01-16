@@ -30,8 +30,8 @@
 
   &__text-wraper {
     position: relative;
-
     background-color: $shadow-background-color;
+
     @media screen and (max-width: 767px) {
       margin-top: 29px;
       margin-bottom: 56px;
@@ -71,6 +71,32 @@
     }
   }
 
+  &__gradient {
+    width: 180px;
+
+    background-image: repeating-linear-gradient(
+      to bottom,
+      $shadow-background-color,
+      $shadow-background-color 29px,
+      $border-color 29px,
+      $border-color 30px
+    );
+
+    @media screen and (min-width: $tablet) {
+      width: 544px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 822px;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        $shadow-background-color,
+        $shadow-background-color 28px,
+        $border-color 28px,
+        $border-color 29px
+      );
+    }
+  }
+
   &__text {
     text-align: center;
     color: $primary-text-color;
@@ -81,7 +107,6 @@
     background-repeat: no-repeat;
     background-position: center top 15px;
     background-size: 100% 1px;
-    background-image: linear-gradient($border-color, $border-color);
 
     @media screen and (min-width: $tablet) {
       max-width: 460px;
@@ -106,4 +131,8 @@
       font-size: 20px;
     }
   }
+}
+
+.slick-next {
+  display: none !important;
 }
