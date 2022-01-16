@@ -39,15 +39,6 @@
   margin-right: 13px;
 }
 
-.modal-button__text {
-  @media screen and (max-width: 767px) {
-    margin-right: 16px;
-  }
-  @media screen and (min-width: $tablet) and (max-width: 1279px) {
-    margin-right: 12px;
-  }
-}
-
 .button__icon--white {
   stroke: $primary-color;
 }
@@ -56,6 +47,7 @@
   stroke: $primary-brand-color;
 }
 
+// ---------------------- Header BUTTONS -------------------  //
 
 .header-button {
   @extend %button--white;
@@ -72,8 +64,12 @@
 .modal-button {
   @extend %button--white;
   @extend %flex-center-style;
+  margin-top: 60px;
+  margin-bottom: 19px;
 
   @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
     width: 209px;
   }
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
@@ -81,6 +77,16 @@
   }
   @media screen and (min-width: $desktop) {
     display: none;
+    margin: 0;
+  }
+}
+
+.modal-button__text {
+  @media screen and (max-width: 767px) {
+    margin-right: 16px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-right: 12px;
   }
 }
 
@@ -138,4 +144,3 @@
   transform: scale(1);
   transition: transform $transition-duration $transition-timing-function;
 }
-
