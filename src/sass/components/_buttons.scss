@@ -86,12 +86,36 @@
 .order-button {
   @extend %button--pink;
   @extend %flex-center-style;
-  margin: 60px auto 19px;
+  @media screen and (max-width: 767px) {
+    width: 209px;
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 186px;
+    margin-right: 16px;
+  }
+}
+
+.close-button {
+  @extend %button--white;
+  @extend %flex-center-style;
   @media screen and (max-width: 767px) {
     width: 209px;
   }
   @media screen and (min-width: $tablet) {
     width: 186px;
+  }
+}
+
+.button-wraper {
+  display: flex;
+  margin: 60px auto 19px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: $tablet) {
+    justify-content: space-around;
   }
 }
 
