@@ -254,9 +254,9 @@
     left: 0;
     height: 77%;
     transform: translateY(130%);
-    transition: transform 0.8s $transition-timing-function;
+    transition: transform 0.5s $transition-timing-function;
     border-radius: 24px;
-    padding: 60px 40px;
+    padding: 160px 40px;
   }
 
   &__item:first-child &__item-overlay {
@@ -291,8 +291,8 @@
     background-size: cover;
 
     transform: rotate(0);
-    transition: transform 0.8s $transition-timing-function;
-    &:hover {
+    transition: transform 0.5s $transition-timing-function;
+    &:hover, &:focus  {
       transform: rotate(-90deg);
     }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
