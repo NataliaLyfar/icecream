@@ -6,7 +6,7 @@
     openHow: document.querySelector(".js-how"),
     openOur: document.querySelector(".js-our"),
     openContact: document.querySelector(".js-contact"),
-    closeMenuBtn: document.querySelector(".js-close-menu"),    
+    closeMenuBtn: document.querySelector(".js-close-menu"),
     menu: document.querySelector(".mobile-menu"),
   };
 

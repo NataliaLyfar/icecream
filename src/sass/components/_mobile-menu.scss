@@ -8,9 +8,9 @@
     background-color: $primary-brand-shadow-color;
   }
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
-    padding: 34px;
-    height: 100vh;
+    width: 254px;
     background-color: $primary-brand-shadow-color;
+    height: 100vh;
   }
   @media screen and (min-width: $desktop) {
     position: static;
@@ -20,13 +20,30 @@
 .cross-button {
   position: absolute;
   display: block;
-  @media screen and (max-width: 767px) {
-    top: 23px;
-    right: 28px;
-  }
+  top: 23px;
+  right: 28px;
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     top: 23px;
     right: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.menu-container {
+  padding: 60px 20px;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    padding: 60px 24px;
+  }
+}
+
+.menu-button {
+  width: 20px;
+  height: 14px;
+  fill: $primary-brand-color;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-right: 28px;
   }
   @media screen and (min-width: $desktop) {
     display: none;

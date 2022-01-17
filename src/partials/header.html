@@ -3,14 +3,6 @@
     <a class="logo" href="./index.html">
       <img src="./images/logo/logo.png" alt="Логотип" />
     </a>
-    <svg
-      width="20"
-      height="12"
-      class="menu-button js-open-menu"
-      aria-label="Переключатель мобильного меню"
-    >
-      <use class="icon-menu" href="./images/symbol-defs.svg#menu"></use>
-    </svg>
     <div class="mobile-menu is-hidden">
       <div class="menu-container">
         <svg width="14" height="14" class="cross-button js-close-menu">
@@ -41,11 +33,21 @@
         </ul>
       </div>
     </div>
-    <button type="button" class="header-button pointer">
-      <span class="button__text">Buy now</span>
-      <svg width="6" height="10" class="button__icon--pink">
-        <use href="./images/symbol-defs.svg#icon-Vector-1"></use>
+    <div class="menu-button-wraper">
+      <svg
+        width="20"
+        height="12"
+        class="menu-button js-open-menu"
+        aria-label="Переключатель мобильного меню"
+      >
+        <use class="icon-menu" href="./images/symbol-defs.svg#menu"></use>
       </svg>
-    </button>
+      <button type="button" class="header-button pointer">
+        <span class="button__text">Buy now</span>
+        <svg width="6" height="10" class="button__icon--pink">
+          <use href="./images/symbol-defs.svg#icon-Vector-1"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>

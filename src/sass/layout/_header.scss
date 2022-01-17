@@ -5,16 +5,22 @@
 }
 
 .header-wraper {
-  padding-top: 37px;
-  @media screen and (max-width: 767px) {
-    padding-top: 6px;
-  }
   display: flex;
   align-items: center;
+  padding-top: 6px;
   justify-content: space-between;
+  @media screen and (min-width: $tablet) {
+    padding-left: 34px;
+    padding-top: 37px;
+  }
   @media screen and (min-width: $desktop) {
     padding-left: 46px;
   }
+}
+
+.menu-button-wraper {
+  display: flex;
+  align-items: center;
 }
 
 .menu-button {
@@ -43,7 +49,6 @@
   }
   @media screen and (max-width: 1279px) {
     padding: 13px 0;
-    display: block;
     border-bottom: 1px solid $menu-border-color;
     &:first-child {
       border-top: 1px solid $menu-border-color;
@@ -59,12 +64,6 @@
   color: $primary-color;
   @media screen and (min-width: $desktop) {
     font-size: 16px;
-  }
-  @media screen and (max-width: 1279px) {
-    margin-left: 21px;
-  }
-  @media screen and (min-width: $tablet) and (max-width: 1279px) {
-    margin-left: 24px;
   }
   &:hover,
   &:focus {
