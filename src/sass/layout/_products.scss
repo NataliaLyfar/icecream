@@ -292,13 +292,11 @@
 
     transform: rotate(0);
     transition: transform 0.8s $transition-timing-function;
-
+    &:hover {
+      transform: rotate(-90deg);
+    }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/products/arrow-right-2x.png');
-    }
-  }
-
-  &__button:hover {
-    transform: rotate(-90deg);
+    } 
   }
 }

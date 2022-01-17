@@ -3,7 +3,7 @@
   display: flex;
   padding-bottom: 97px;
   @media screen and (min-width: $tablet) {
-    padding-bottom: 140px;
+  padding-bottom: 140px;
   }
 }
 
@@ -25,8 +25,8 @@
 
 .advantages__item {
   &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 38px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 38px;
     }
   }
   @media screen and (max-width: 767px) {

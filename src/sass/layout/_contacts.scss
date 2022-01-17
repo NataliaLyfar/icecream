@@ -1,6 +1,4 @@
 .contacts {
-  //   background-color: $secondary-color;
-
   @media screen and (max-width: 767px) {
     padding-bottom: 113px;
     background-image: linear-gradient(to bottom, $primary-color 84px, $secondary-color 84px);
@@ -82,20 +80,13 @@
 }
 
 .contacts-list__category {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-weight: 500;
-  line-height: 1.86;
-  letter-spacing: 0.04em;
-
+  @extend %flex-center-style;
+  @include font(500, 12px, 1.86, 0.04em);
   color: $primary-color;
 
   @media screen and (max-width: 767px) {
     margin-bottom: 25px;
     height: 16px;
-    font-size: 12px;
     border-radius: 4px;
   }
   @media screen and (min-width: $tablet) {
@@ -132,14 +123,9 @@
 }
 
 .contacts-list__city {
-  font-weight: 500;
-  line-height: 1.86;
-  letter-spacing: 0.04em;
-  color: $primary-text-color;
-
+  @include font(500, 12px, 1.86, 0.04em);
   @media screen and (max-width: 767px) {
     margin-bottom: 10px;
-    font-size: 12px;
   }
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     margin-bottom: 14px;
@@ -152,27 +138,18 @@
 }
 
 .contacts-list__text {
-  font-weight: 500;
+  @include font(500, 12px, 1.5, 0.04em);
   color: $secondary-text-color;
-
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-    line-height: 1.5;
-  }
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
-    font-size: 14px;
-    line-height: 1.66;
+    @include font(500, 14px, 1.66, 0.04em);
   }
   @media screen and (min-width: $desktop) {
-    font-size: 16px;
-    line-height: 1.83;
-    letter-spacing: 0.04em;
+    @include font(500, 16px, 1.83, 0.04em);
   }
 }
 
 .contacts-list__border-line {
   position: relative;
-
   @media screen and (max-width: 767px) {
     margin-bottom: 50px;
   }
@@ -216,30 +193,18 @@
 }
 
 .contacts-list__info {
-  font-weight: 500;
-  line-height: 1.86;
-  color: $primary-text-color;
-
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-  }
+  @include font(500, 12px, 1.86, 0.04em);
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     font-size: 14px;
   }
   @media screen and (min-width: $desktop) {
     font-size: 16px;
-    letter-spacing: 0.04em;
   }
 }
 
 .contacts-list__schedule {
-  font-weight: 500;
-  line-height: 1.86;
+  @include font(500, 12px, 1.86, 0.04em);
   color: $tertiary-brand-color;
-
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-  }
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     font-size: 14px;
   }
@@ -249,24 +214,16 @@
 }
 
 .contacts-list__link {
+  @include font(500, 12px, 1.5, 0.04em);
   display: block;
   font-style: normal;
-  font-weight: 500;
   color: $secondary-text-color;
-
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
-    font-size: 14px;
-    line-height: 1.83;
+    @include font(500, 14px, 1.83, 0.04em);
   }
 
   @media screen and (min-width: $desktop) {
     font-size: 16px;
-    line-height: 1.83;
   }
 }
 
