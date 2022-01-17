@@ -69,11 +69,11 @@
 }
 
 .map-form__list-item {
+  @include transition (transform);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transform: scale(1);
-  transition: transform $transition-duration $transition-timing-function;
 
   @media screen and (max-width: 767px) {
     &:not(:last-child) {

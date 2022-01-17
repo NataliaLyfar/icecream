@@ -44,6 +44,8 @@
 }
 
 .about-close-button {
+  @include transition (transform);
+  @include transition (fill);
   @extend %flex-center-style;
   position: absolute;
   top: 20px;

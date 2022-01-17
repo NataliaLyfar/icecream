@@ -33,6 +33,7 @@
 }
 
 .input-field__input {
+  @include transition (border-color);
   width: 100%;
   padding-left: 35px;
   height: 40px;
@@ -49,7 +50,7 @@
     fill: $primary-text-color;
   }
 
-  &:focus {
+  &:focus, &:hover {
     border-color: $second-card-color;
   }
 }

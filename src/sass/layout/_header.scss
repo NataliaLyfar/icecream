@@ -57,6 +57,7 @@
 }
 
 .nav-list__link {
+  @include transition (color);
   padding: 13px 0;
   font-weight: 700;
   font-size: 14px;

@@ -52,6 +52,8 @@
 }
 
 .franchise-form__input {
+  @include transition (border-color);
+  @include transition (color);
   padding: 10px 10px 10px 28px;
   outline: none;
   border: 2px solid $secondary-text-color;
@@ -79,6 +81,7 @@
 }
 
 .franchise-form__label {
+  @include transition (top);
   display: inline-block;
   padding: 0 10px;
   position: absolute;
@@ -90,8 +93,6 @@
 
   color: $secondary-text-color;
   background-color: $primary-color;
-
-  transition: top $transition-duration $transition-timing-function;
 
   @media screen and (max-width: 767px) {
     font-size: 12px;
