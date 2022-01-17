@@ -4,13 +4,13 @@
 
 .footer-wrapper{
     @media screen and (min-width:$tablet){
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 91px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 91px;
     }
 
     @media screen and (min-width:$desktop){
-        padding-bottom: 97px;
+    padding-bottom: 97px;
     }
 }
 
@@ -82,10 +82,8 @@
     }
 }
 .contact-tel {
-font-weight: 700;
-line-height: 1.86;
+@include font(700, 12px, 1.86, 0.04em);
 text-align: right;
-font-size: 12px;
 @media screen and (min-width:$tablet){
     font-size: 14px;
 }
@@ -111,12 +109,11 @@ padding-bottom: 18px;
     padding-bottom: 10px;
 }
 	&__text {
-    max-width: 149px;
+    @include font(700, 14px, 1.5, 0.04em);
+    
+    max-width: 150px;
     text-align: center;
     margin: 0 auto;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;
     color: $secondary-text-color;
     @media screen and (min-width:$tablet){
      line-height: 1.86;   
