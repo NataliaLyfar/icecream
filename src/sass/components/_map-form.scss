@@ -30,6 +30,7 @@
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .map-form__contacts {
@@ -69,7 +70,7 @@
 }
 
 .map-form__list-item {
-  @include transition (transform);
+  @include transition(transform);
   display: flex;
   justify-content: space-between;
   align-items: center;
