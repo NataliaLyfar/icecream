@@ -251,12 +251,13 @@
   &__item-overlay {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 7.5%;
     height: 77%;
+    width: 85%;
     transform: translateY(130%);
     transition: transform 0.5s $transition-timing-function;
     border-radius: 24px;
-    padding: 160px 40px;
+    padding: 160px 10px;
   }
 
   &__item:first-child &__item-overlay {
@@ -283,6 +284,8 @@
   }
 
   &__button {
+    position: relative;
+    z-index: 99;
     width: 40px;
     height: 40px;
     border-radius: 50%;

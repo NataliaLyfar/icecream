@@ -1,8 +1,6 @@
-.reviews-wraper {
-  @media screen and (max-width: 767px) {
+.reviews {
     padding-top: 80px;
     padding-bottom: 86px;
-  }
   @media screen and (min-width: $tablet) {
     padding-top: 121px;
     padding-bottom: 119px;
@@ -11,8 +9,6 @@
     padding-top: 123px;
     padding-bottom: 132px;
   }
-}
-.reviews {
   &__client-wraper {
     display: flex;
     flex-direction: column;
@@ -54,9 +50,6 @@
         background-color: $shadow-background-color;
     }
   }
-
-  
-
   &__text {
     @include font(500, 14px, 2.16, 0.04em);
 
@@ -129,7 +122,6 @@
        
   }
   }
-
 }
 
 .slick-next {
@@ -142,7 +134,6 @@
 }
 
 .slick-dots li.slick-active button{
-
   &::before {
     background-image: url(../images/customer-reviews/slick-active-btn.svg);
     font-size: 0px !important;
