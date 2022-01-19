@@ -214,6 +214,7 @@
 }
 
 .contacts-list__link {
+  @include transition (color);
   @include font(500, 12px, 1.5, 0.04em);
   display: block;
   font-style: normal;
@@ -224,6 +225,10 @@
 
   @media screen and (min-width: $desktop) {
     font-size: 16px;
+  }
+  &:hover,
+  &:focus {
+    color: $primary-brand-color;
   }
 }
 
