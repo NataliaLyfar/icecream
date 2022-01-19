@@ -103,9 +103,11 @@
   color: $primary-color;
   background-color: $primary-brand-color;
   @include transition(background-color);
+  @include transition(box-shadow);
   &:hover,
   &:focus {
     background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba($primary-text-color, 0.25);
   }
 }
 
@@ -113,9 +115,11 @@
   color: $primary-brand-color;
   background-color: $primary-color;
   @include transition(background-color);
+  @include transition(box-shadow);
   &:hover,
   &:focus {
     background-color: $accent-shadow-color;
+    box-shadow: 0px 4px 4px rgba($primary-text-color, 0.25);
   }
 }
 
@@ -249,6 +253,12 @@
   border-radius: 50%;
   background-repeat: no-repeat;
     background-size: contain;
+    box-shadow: 0px 4px 4px rgba($primary-text-color, 0.25);
+    transform: rotate(0);
+    transition: transform 0.5s $transition-timing-function;
+    &:hover, &:focus  {
+      transform: rotate(-90deg);
+    }
   background-image: url(../images/hero/tablet/arrow-right-tablet@1x.png);
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(../images/hero/tablet/arrow-right-tablet@2x.png);
