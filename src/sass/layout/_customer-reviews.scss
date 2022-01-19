@@ -137,11 +137,18 @@
   &::before {
     background-image: url(../images/customer-reviews/slick-active-btn.svg);
     font-size: 0px !important;
+    opacity: 1 !important;
+    color: transparent !important;
     background-repeat: no-repeat;
     background-position: center;
+    content: "" !important;
   }
 }
-
+.slick-dots li button{
+  &:hover::before {
+    color: $accent-color !important;
+  }
+}
 .slick-dots li button::before {
 font-size: 12px !important;
 }
